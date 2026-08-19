@@ -15,12 +15,14 @@ import FeatureHighlights from './compoents/FeatureHighlights'
 import Testimonials from './compoents/Testimonials'
 import ContactSection from './compoents/ContactSection'
 import Footer from './compoents/Footer'
+import Hero2 from './compoents/Hero2'
 
 export default function page() {
   return (
     <>
       <Navbar/>
-      <Hero/>
+      {/* <Hero/> */}
+      <Hero2/>
       <Category/>
       <Face/>
       <Paper/>
