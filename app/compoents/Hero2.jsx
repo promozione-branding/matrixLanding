@@ -32,50 +32,47 @@ const products = [
 ];
 
 export default function Hero2() {
-
-
-       const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
-    <section className="w-full bg-[#e9f0df]  px-5 py-12 sm:px-8 lg:px-16 xl:px-20">
+    <section className="w-full bg-[#e9f0df]  px-5 py-6 md:py-13 sm:px-8 lg:px-16 xl:px-20">
       <div className="mx-auto max-w-[1500px]">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.5fr] lg:gap-10 xl:gap-16">
-          
+        <div className="grid grid-cols-1 items-center gap-5 md:gap-12 lg:grid-cols-[0.9fr_1.5fr] lg:gap-10 xl:gap-16">
           {/* ================= LEFT CONTENT ================= */}
           <div className="flex flex-col justify-center">
-            
             {/* Brand */}
-            <h3 className="text-[22px] font-bold tracking-wide text-black sm:text-[24px]">
+            <h3 className="text-[22px] font-bold text-center md:text-start tracking-wide text-black sm:text-[24px]">
               MATRIX TISSUES
             </h3>
 
             {/* Manufacturing */}
-            <div className="mt-5 flex flex-wrap items-center gap-3 text-[12px] font-medium tracking-[0.12em] text-black sm:text-[13px]">
+            <div className="mt-3 md:mt-5 flex flex-col md:flex-row items-center text-center md:text-start gap-3 text-[12px] font-medium tracking-[0.12em] text-black sm:text-[13px]">
               <span>MANUFACTURING SINCE 2008</span>
 
-              <span className="text-black">•</span>
+              <span className="text-black hidden md:block">•</span>
 
               <span>BAWANA, DELHI</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="mt-12 max-w-[500px] bebas text-[40px] font-semibold leading-[1.15] tracking-[-0.02em] text-[#cf1919] sm:text-[48px] lg:text-[42px] xl:text-[48px]">
+            <h1 className="mt-5 md:mt-12 max-w-[500px] bebas text-center md:text-start text-[40px] font-semibold leading-[1.15] tracking-[-0.02em] text-[#cf1919] sm:text-[48px] lg:text-[42px] xl:text-[48px]">
               Soft on customers.
               <br />
               Tough on wholesale.
             </h1>
 
             {/* Description */}
-            <div className="mt-6 space-y-2  text-[16px] italic leading-relaxed text-black sm:text-[17px]">
+            <div className="mt-3 md:mt-6 space-y-2  text-[16px] text-center md:text-start italic leading-relaxed text-black sm:text-[17px]">
               <p>100% virgin pulp · custom branding</p>
               <p>1 carton minimum · pan-India supply</p>
             </div>
 
             {/* CTA */}
-            <div className="mt-9 flex flex-wrap items-center gap-5">
+            <div className="mt-9 flex flex-col md:flex-row  md:flex-wrap items-center gap-5">
               <button
-               onClick={()=>{setIsPopupOpen(true)}}
+                onClick={() => {
+                  setIsPopupOpen(true);
+                }}
                 className="inline-flex items-center justify-center rounded-full bg-[#cf1919] px-6 py-4 text-[15px] font-semibold text-white shadow-md transition duration-300 hover:-translate-y-1 hover:bg-[#ff0000] hover:shadow-lg"
               >
                 Get a wholesale quote
@@ -91,7 +88,7 @@ export default function Hero2() {
           </div>
 
           {/* ================= PRODUCT GRID ================= */}
-          <div className="grid grid-cols-1 gap-x-7 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-6 xl:gap-x-8">
+          <div className="grid grid-cols-1 gap-x-7 gap-y-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-6 xl:gap-x-8">
             {products.map((product, index) => (
               <div
                 key={product.name}
@@ -99,7 +96,6 @@ export default function Hero2() {
               >
                 {/* Product Image Box */}
                 <div className="relative flex h-[180px] w-full items-center justify-center overflow-hidden rounded-[20px] bg-white shadow-[0_15px_25px_rgba(50,65,50,0.14)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_20px_30px_rgba(50,65,50,0.20)] sm:h-[165px] lg:h-[170px] xl:h-[180px]">
-                  
                   <div className="relative h-[125px] w-[85%]">
                     <Image
                       src={product.image}
@@ -121,11 +117,7 @@ export default function Hero2() {
         </div>
       </div>
 
-
-       <Popup
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </section>
   );
 }
