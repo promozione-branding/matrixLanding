@@ -46,7 +46,7 @@ export default function Hero2() {
             </h3>
 
             {/* Manufacturing */}
-            <div className="mt-3 md:mt-5 flex flex-col md:flex-row items-center text-center md:text-start gap-3 text-[12px] font-medium tracking-[0.12em] text-black sm:text-[13px]">
+            <div className="mt-3 md:mt-5 flex flex-col md:flex-row items-center text-center md:text-start gap-0 md:gap-2 text-[12px] font-medium tracking-[0.12em] text-black sm:text-[13px]">
               <span>MANUFACTURING SINCE 2008</span>
 
               <span className="text-black hidden md:block">•</span>
@@ -75,12 +75,12 @@ export default function Hero2() {
                 }}
                 className="inline-flex items-center justify-center rounded-full bg-[#cf1919] px-6 py-4 text-[15px] font-semibold text-white shadow-md transition duration-300 hover:-translate-y-1 hover:bg-[#ff0000] hover:shadow-lg"
               >
-                Get a wholesale quote
+                Get  Wholesale Quote
               </button>
 
               <a
                 href="tel:+918810540823"
-                className="font-mono text-[13px] tracking-wide text-black transition hover:text-[#cf1919]"
+                className="font-mono text-[17px] md:text-[15px] tracking-wide text-black transition hover:text-[#cf1919]"
               >
                 or call +91 88105 40823
               </a>
@@ -88,7 +88,7 @@ export default function Hero2() {
           </div>
 
           {/* ================= PRODUCT GRID ================= */}
-          <div className="grid grid-cols-1 gap-x-7 gap-y-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-6 xl:gap-x-8">
+          <div className="hidden md:grid  grid-cols-1 gap-x-7 gap-y-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-6 xl:gap-x-8">
             {products.map((product, index) => (
               <div
                 key={product.name}
@@ -108,7 +108,7 @@ export default function Hero2() {
                 </div>
 
                 {/* Product Name */}
-                <p className="mt-4 text-center text-[11px] font-bold tracking-[0.08em] text-black">
+                <p className="mt-4 text-center text-[15px] font-bold tracking-[0.08em] text-black">
                   {product.name}
                 </p>
               </div>

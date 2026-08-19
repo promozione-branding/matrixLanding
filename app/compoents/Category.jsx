@@ -47,7 +47,7 @@ const Category = () => {
       </h2>
 
       {/* Categories Grid */}
-      <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-2 px-1 max-w-6xl mx-auto pb-6">
+      <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-2 md:grid-cols-3 gap-2 px-1 max-w-6xl mx-auto pb-6">
         {categories.map((category, index) => (
           <div
             key={index}
@@ -63,7 +63,7 @@ const Category = () => {
               className="object-contain"
             />
 
-            <p className="mt-2 text-center text-white font-bold text-sm px-2 leading-tight">
+            <p className="mt-2 text-center text-white font-bold text-lg md:text-xl px-2 leading-tight">
               {category.name}
             </p>
           </div>

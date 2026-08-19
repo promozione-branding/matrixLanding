@@ -34,66 +34,45 @@ const Face = () => {
   ];
 
   return (
-    <div className="bg-[#ffffff] ">
-      <section className="mb-5 px-2 bg-[#ffffff]   max-w-6xl mx-auto">
-        {/* Heading */}
-        <h2 className="font-medium b bebas text-[2.4rem] text-center pt-4 mb-4">
-          Our Face Tissue
-        </h2>
+   <div className="bg-[#ffffff] w-full">
+  <section className="mb-5 px-2 py-5 bg-[#ffffff] max-w-6xl mx-auto">
 
-        {/* Products */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* First Row */}
-          <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-4">
-            {products.slice(0, 3).map((product, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center"
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  width={200}
-                  height={200}
-                  loading="lazy"
-                  className="object-contain"
-                />
+    {/* Heading */}
+    <h2 className="font-medium b bebas text-[2.4rem] text-center mb-4">
+       Our Face Tissue
+    </h2>
 
-                <p className="text-sm b font-bold mt-2 px-2">
-                  {product.name}
-                </p>
-              </div>
-            ))}
-          </div>
+    {/* Products */}
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+      {products.slice(0, 6).map((product, index) => (
+        <div
+          key={index}
+          onClick={() => setIsPopupOpen(true)}
+          className="flex flex-col items-center text-center cursor-pointer"
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            width={200}
+            height={200}
+            loading="lazy"
+            className="object-contain"
+          />
 
-          {/* Second Row */}
-          <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-3">
-            {products.slice(3, 6).map((product, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center"
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  width={200}
-                  height={200}
-                  loading="lazy"
-                  className="object-contain"
-                />
-
-                <p className="text-[13px] b font-bold mt-1">{product.name}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-sm b font-bold mt-2 px-2">
+            {product.name}
+          </p>
         </div>
-      </section>
-
-      <Popup
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      ))}
     </div>
+
+  </section>
+
+  <Popup
+    isOpen={isPopupOpen}
+    onClose={() => setIsPopupOpen(false)}
+  />
+</div>
   );
 };
 

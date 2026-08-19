@@ -34,70 +34,83 @@ const Paper = () => {
 
   return (
     <div className="bg-[#ffffff] w-full">
-    <section className="mb-5 px-2 bg-[#ffffff] max-w-6xl mx-auto">
-      {/* Heading */}
-      <h2 className="font-medium b bebas text-[2.4rem] text-center mb-4">
-        Our Paper Napkins
-      </h2>
+  <section className="mb-5 px-2 bg-[#ffffff] max-w-6xl mx-auto">
 
-      {/* Products */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    {/* Heading */}
+    <h2 className="font-medium b bebas text-[2.4rem] text-center mb-4">
+      Our Paper Napkins
+    </h2>
 
-        {/* First 3 Products */}
-        <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-4">
-          {products.slice(0, 3).map((product, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                width={200}
-                height={200}
-                loading="lazy"
-                className="object-contain"
-              />
+    {/* Products */}
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+      {products.slice(0, 6).map((product, index) => (
+        <div
+          key={index}
+          onClick={() => setIsPopupOpen(true)}
+          className="flex flex-col items-center text-center cursor-pointer"
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            width={200}
+            height={200}
+            loading="lazy"
+            className="object-contain"
+          />
 
-              <p className="text-sm b font-bold mt-2 px-2">
-                {product.name}
-              </p>
-            </div>
-          ))}
+          <p className="text-sm b font-bold mt-2 px-2">
+            {product.name}
+          </p>
         </div>
-
-        {/* Last 3 Products */}
-        <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-4">
-          {products.slice(3, 6).map((product, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                width={200}
-                height={200}
-                loading="lazy"
-                className="object-contain"
-              />
-
-              <p className="text-[13px] b font-bold mt-1">
-                {product.name}
-              </p>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
-
-    <Popup
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      ))}
     </div>
-  );
+
+  </section>
+
+  <Popup
+    isOpen={isPopupOpen}
+    onClose={() => setIsPopupOpen(false)}
+  />
+</div>
+  );<div className="bg-[#ffffff] w-full">
+  <section className="mb-5 px-2 bg-[#ffffff] max-w-6xl mx-auto">
+
+    {/* Heading */}
+    <h2 className="font-medium b bebas text-[2.4rem] text-center mb-4">
+      Our Paper Napkins
+    </h2>
+
+    {/* Products */}
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+      {products.slice(0, 6).map((product, index) => (
+        <div
+          key={index}
+          onClick={() => setIsPopupOpen(true)}
+          className="flex flex-col items-center text-center cursor-pointer"
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            width={200}
+            height={200}
+            loading="lazy"
+            className="object-contain"
+          />
+
+          <p className="text-sm b font-bold mt-2 px-2">
+            {product.name}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </section>
+
+  <Popup
+    isOpen={isPopupOpen}
+    onClose={() => setIsPopupOpen(false)}
+  />
+</div>
 };
 
 export default Paper;
