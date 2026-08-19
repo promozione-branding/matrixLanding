@@ -30,7 +30,7 @@ const Face = () => {
     <div className="bg-[#ffffff] ">
       <section className="mb-5 px-2 bg-[#ffffff]   max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="font-medium b text-[2.4rem] text-center pt-4 mb-4">
+        <h2 className="font-medium b bebas text-[2.4rem] text-center pt-4 mb-4">
           Our Face Tissue
         </h2>
 
@@ -52,7 +52,7 @@ const Face = () => {
                   className="object-contain"
                 />
 
-                <p className="text-sm b font-medium mt-2 px-2">
+                <p className="text-sm b font-bold mt-2 px-2">
                   {product.name}
                 </p>
               </div>
@@ -75,7 +75,7 @@ const Face = () => {
                   className="object-contain"
                 />
 
-                <p className="text-[13px] b font-medium mt-1">{product.name}</p>
+                <p className="text-[13px] b font-bold mt-1">{product.name}</p>
               </div>
             ))}
           </div>

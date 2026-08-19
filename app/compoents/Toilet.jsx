@@ -30,7 +30,7 @@ const Toilet = () => {
     <div className=" bg-[#ffffff] w-full">
     <section className="mb-10 bg-[#ffffff] px-2 max-w-6xl mx-auto">
       {/* Heading */}
-      <h3 className="font-medium b text-[2.4rem] text-center pt-4 mb-4">
+      <h3 className="font-medium b text-[2.4rem] bebas text-center pt-4 mb-4">
         OUR TOILET ROLLS
       </h3>
 
@@ -50,7 +50,7 @@ const Toilet = () => {
               className="object-contain"
             />
 
-            <p className="text-[13px] b font-medium mt-2 px-1 leading-tight">
+            <p className="text-[13px] b font-bold mt-2 px-1 leading-tight">
               {product.name}
             </p>
           </div>

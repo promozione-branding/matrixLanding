@@ -5,7 +5,7 @@ const Hero = () => {
     <section
       role="img"
       aria-label="Hero background"
-      className="relative w-full md:h-full h-[45vh] bg-cover bg-center bg-no-repeat"
+      className="relative w-full  md:h-full h-[45vh] bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('/images/bg-1.jpg')",
       }}
@@ -19,7 +19,7 @@ const Hero = () => {
 
           {/* Left Content */}
           <div className="text-white flex flex-col justify-center">
-            <h1 className="md:text-7xl text-4xl font-bold leading-tight">
+            <h1 className="md:text-7xl bebas text-4xl font-bold leading-tight">
               Premium{" "}
               <span className="text-[#DE1E26]">
                 Paper Napkins
@@ -27,7 +27,7 @@ const Hero = () => {
               Manufacturers
             </h1>
 
-            <p className="mt-4 md:text-lg text-base leading-6">
+            <p className="mt-4 md:text-lg bebas text-base leading-6">
               We deliver unmatched quality and tailored designs that elevate
               your brand, all at a price that fits your business.
             </p>

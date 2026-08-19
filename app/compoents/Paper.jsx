@@ -30,7 +30,7 @@ const Paper = () => {
     <div className="bg-[#ffffff] w-full">
     <section className="mb-5 px-2 bg-[#ffffff] max-w-6xl mx-auto">
       {/* Heading */}
-      <h2 className="font-medium b text-[2.4rem] text-center mb-4">
+      <h2 className="font-medium b bebas text-[2.4rem] text-center mb-4">
         Our Paper Napkins
       </h2>
 
@@ -53,7 +53,7 @@ const Paper = () => {
                 className="object-contain"
               />
 
-              <p className="text-sm b font-medium mt-2 px-2">
+              <p className="text-sm b font-bold mt-2 px-2">
                 {product.name}
               </p>
             </div>
@@ -76,7 +76,7 @@ const Paper = () => {
                 className="object-contain"
               />
 
-              <p className="text-[13px] b font-medium mt-1">
+              <p className="text-[13px] b font-bold mt-1">
                 {product.name}
               </p>
             </div>

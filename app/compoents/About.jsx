@@ -17,7 +17,7 @@ const About = () => {
             className="mb-5 object-contain"
           />
 
-          <p className="text-lg b font-medium text-center">
+          <p className="text-lg b bebas font-medium text-center">
             About Our Company
           </p>
         </div>
@@ -25,7 +25,7 @@ const About = () => {
         {/* Right Content */}
         <div className="text-center md:text-left">
 
-          <p className="text-xl b md:text-2xl font-medium md:mb-5 mb-2 leading-snug">
+          <p className="text-xl b bebas md:text-2xl font-medium md:mb-5 mb-2 leading-snug">
             Matrix Tissues offers paper napkins, kitchen towels, and toilet
             paper—soft, strong, and perfect for home, office, travel, and car
             use.

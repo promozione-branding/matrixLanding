@@ -22,7 +22,7 @@ const Kitchen = () => {
     <div className="w-full bg-[#ffffff]">
     <section className="mb-10 bg-[#ffffff] px-2 max-w-6xl mx-auto">
       {/* Heading */}
-      <h3 className="font-medium b text-[2.4rem] text-center pt-4 mb-4">
+      <h3 className="font-medium b bebas text-[2.4rem] text-center pt-4 mb-4">
         OUR KITCHEN TOWEL
       </h3>
 
@@ -42,7 +42,7 @@ const Kitchen = () => {
               className="object-contain"
             />
 
-            <p className="text-sm md:text-[13px] b font-medium mt-2 px-2 leading-tight">
+            <p className="text-sm md:text-[13px] b font-bold mt-2 px-2 leading-tight">
               {product.name}
             </p>
           </div>

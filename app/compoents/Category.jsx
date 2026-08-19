@@ -35,7 +35,7 @@ const Category = () => {
   return (
     <section className="bg-gray-100" id="product">
       {/* Heading */}
-      <h2 className="font-medium b text-[2.4rem] text-center pt-4 mb-4">
+      <h2 className="font-medium b bebas text-[2.4rem] text-center pt-4 mb-4">
         Categories
       </h2>
 
@@ -56,7 +56,7 @@ const Category = () => {
               className="object-contain"
             />
 
-            <p className="mt-2 text-center text-white font-semibold text-sm px-2 leading-tight">
+            <p className="mt-2 text-center text-white font-bold text-sm px-2 leading-tight">
               {category.name}
             </p>
           </div>
