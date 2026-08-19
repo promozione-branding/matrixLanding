@@ -1,8 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Popup from "./Popup";
+import { useState } from "react";
 
 const Navbar = () => {
+
+     const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <nav className="z-20 bebas flex items-center justify-between px-2 py-3 bg-white sticky top-0">
       {/* Logo */}
@@ -66,12 +71,18 @@ const Navbar = () => {
 
         {/* Get Quote Button */}
         <button
+        onClick={()=>{setIsPopupOpen(true)}}
           type="button"
           className="font-medium bg-[#CF1919] text-white px-3 py-1.5 rounded-sm text-lg hover:bg-red-700 transition-colors"
         >
           Get a Quote
         </button>
       </div>
+
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </nav>
   );
 };

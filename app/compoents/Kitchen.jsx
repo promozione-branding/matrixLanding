@@ -1,3 +1,9 @@
+"use client"
+
+import { useState } from "react";
+import Popup from "./Popup";
+
+
 const Kitchen = () => {
   const products = [
     {
@@ -18,6 +24,9 @@ const Kitchen = () => {
     },
   ];
 
+     const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+
   return (
     <div className="w-full bg-[#ffffff]">
     <section className="mb-10 bg-[#ffffff] px-2 max-w-6xl mx-auto">
@@ -30,6 +39,7 @@ const Kitchen = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-2">
         {products.map((product, index) => (
           <div
+            onClick={()=>{setIsPopupOpen(true)}}
             key={index}
             className="flex flex-col items-center text-center"
           >
@@ -49,6 +59,11 @@ const Kitchen = () => {
         ))}
       </div>
     </section>
+
+    <Popup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </div>
   );
 };

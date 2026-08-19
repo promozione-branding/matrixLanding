@@ -1,4 +1,11 @@
+"use client"
+import { useState } from "react";
+import Popup from "./Popup";
+
 const Face = () => {
+
+     const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const products = [
     {
       name: "Customisable Face Tissues",
@@ -37,7 +44,7 @@ const Face = () => {
         {/* Products */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* First Row */}
-          <div className="grid grid-cols-3 gap-4">
+          <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-4">
             {products.slice(0, 3).map((product, index) => (
               <div
                 key={index}
@@ -60,7 +67,7 @@ const Face = () => {
           </div>
 
           {/* Second Row */}
-          <div className="grid grid-cols-3 gap-3">
+          <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-3">
             {products.slice(3, 6).map((product, index) => (
               <div
                 key={index}
@@ -81,6 +88,11 @@ const Face = () => {
           </div>
         </div>
       </section>
+
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </div>
   );
 };

@@ -1,4 +1,10 @@
+"use client"
+import { useState } from "react";
+import Popup from "./Popup";
+
 const Paper = () => {
+     const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const products = [
     {
       name: "Papyrus Colour Napkin",
@@ -38,7 +44,7 @@ const Paper = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
         {/* First 3 Products */}
-        <div className="grid grid-cols-3 gap-4">
+        <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-4">
           {products.slice(0, 3).map((product, index) => (
             <div
               key={index}
@@ -61,7 +67,7 @@ const Paper = () => {
         </div>
 
         {/* Last 3 Products */}
-        <div className="grid grid-cols-3 gap-4">
+        <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-4">
           {products.slice(3, 6).map((product, index) => (
             <div
               key={index}
@@ -85,6 +91,11 @@ const Paper = () => {
 
       </div>
     </section>
+
+    <Popup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </div>
   );
 };

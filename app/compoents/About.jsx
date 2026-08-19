@@ -1,11 +1,13 @@
-const About = () => {
-  return (
-    <section
-      className="bg-[#FAB969] px-5 md:py-12 py-5"
-      id="about"
-    >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5 items-center">
+"use client";
+import { useState } from "react";
+import Popup from "./Popup";
 
+const About = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  return (
+    <section className="bg-[#FAB969] px-5 md:py-12 py-5" id="about">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5 items-center">
         {/* Left Content */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
@@ -24,7 +26,6 @@ const About = () => {
 
         {/* Right Content */}
         <div className="text-center md:text-left">
-
           <p className="text-xl b bebas md:text-2xl font-medium md:mb-5 mb-2 leading-snug">
             Matrix Tissues offers paper napkins, kitchen towels, and toilet
             paper—soft, strong, and perfect for home, office, travel, and car
@@ -39,7 +40,6 @@ const About = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-
             <a
               href="https://wa.me/918810540823"
               target="_blank"
@@ -50,16 +50,18 @@ const About = () => {
             </a>
 
             <button
+              onClick={() => {
+                setIsPopupOpen(true);
+              }}
               type="button"
               className="bg-[#CF1919] text-white px-6 py-2 font-medium rounded-md hover:bg-red-700 transition-colors"
             >
               Explore Premium Range
             </button>
-
           </div>
         </div>
-
       </div>
+      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </section>
   );
 };

@@ -93,7 +93,14 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="border-t border-white/20 text-center text-xs px-4 py-3">
-        Website Designed by <a target="_blank" href="https://www.inquirybazaar.com/" className="underline">Inquiry Bazaar Pvt Ltd</a>
+        Website Designed by{" "}
+        <a
+          target="_blank"
+          href="https://www.inquirybazaar.com/"
+          className="underline"
+        >
+          Inquiry Bazaar Pvt Ltd
+        </a>
       </div>
     </footer>
   );

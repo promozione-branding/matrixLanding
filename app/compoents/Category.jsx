@@ -1,4 +1,11 @@
+"use client"
+import { useState } from "react";
+import Popup from "./Popup";
+
 const Category = () => {
+
+   const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const categories = [
     {
       name: "Face Tissue",
@@ -40,7 +47,7 @@ const Category = () => {
       </h2>
 
       {/* Categories Grid */}
-      <div className="grid grid-cols-3 gap-2 px-1 max-w-6xl mx-auto pb-6">
+      <div onClick={()=>{setIsPopupOpen(true)}} className="grid grid-cols-3 gap-2 px-1 max-w-6xl mx-auto pb-6">
         {categories.map((category, index) => (
           <div
             key={index}
@@ -62,6 +69,13 @@ const Category = () => {
           </div>
         ))}
       </div>
+
+
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
+
     </section>
   );
 };

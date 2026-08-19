@@ -1,4 +1,12 @@
+"use client"
+
+import { useState } from "react";
+import Popup from "./Popup";
+
 const Toilet = () => {
+
+     const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const products = [
     {
       name: "Papyrus Toilet Roll Essentia",
@@ -35,9 +43,10 @@ const Toilet = () => {
       </h3>
 
       {/* Products */}
-      <div className="grid grid-cols-3 md:grid-cols-6 gap-5 px-2">
+      <div  className="grid grid-cols-3 md:grid-cols-6 gap-5 px-2">
         {products.map((product, index) => (
           <div
+          onClick={()=>{setIsPopupOpen(true)}}
             key={index}
             className="flex flex-col items-center text-center"
           >
@@ -57,6 +66,11 @@ const Toilet = () => {
         ))}
       </div>
     </section>
+
+    <Popup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </div>
   );
 };
